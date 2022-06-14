@@ -105,19 +105,6 @@ def mutacao():
     mutante = listaFilho2.pop(localMutante)
     listaFilho2.append(mutante)
 
-def condPare(comparar1, comparar2):
-   if comparar1 > comparar2:
-       menorRotaLista = listaFilho2
-       return comparar2
-
-   else:
-       menorRotaLista = listaFilho1
-       return comparar1
-
-def reset(ref0,ref2,ref3):
-   ref2 = 0
-   ref3 = 1
-   ref0 = 0
 
 def envelhecer():
    for l in range(0, nLinhas):
@@ -182,8 +169,8 @@ for variavel in range(0, len(listaListaDistancia)):
            comparar1 = calcRoute1()
            comparar2 = calcRoute2()
 
-           fazerMutacao = rand.randint(0, 100)
-           if fazerMutacao <= 5:
+           fazerMutacao = rand.randint(1, 100)
+           if fazerMutacao <= 5: #taxa de mutação
                if verif == 1:
                    mutacao()
 
